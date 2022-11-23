@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/nav.ejs') %>
+            <fieldset>
+                <h1>Avicci College</h1>
+                <div class="create-courses content">
+                    <form action="" method="POST">
+                        <label for="title">Course Title</label>
+                        <input type="text" id="title" name="course_title" required>
+                        <label for="snippet">Course Code:</label>
+                        <input type="text" id="code" name="course_code" required>
+                        <label for="body">Course Unit:</label>
+                        <input type="number" id="body" name="course_unit" required>
+                        <button>Add Course</button>
+                    </form>
+                </div>
+            </fieldset>
+            <%- include('../partials/footer.ejs') %>
+    </body>
+
+</html>

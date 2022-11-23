@@ -1,0 +1,43 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: lemonchiffon;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 50px;
+    list-style: none;
+
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 30px;
+    color: #000;
+}
+
+ul li a:hover {
+    color: #fff;
+}
+
+.logo {
+    font-size: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.logo a:hover {
+    color: #fff;
+} */

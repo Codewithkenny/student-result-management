@@ -1,0 +1,26 @@
+<%- include('../partials/head.ejs') %>
+
+    <%- include('../partials/nav.ejs') %>
+
+        <body>
+
+
+
+            <form action="" method="post">
+                <% courses.forEach(course=> { %>
+
+
+                    <input type="checkbox" name="courses" value=<%=course._id%>
+                    <label for="">
+                        <%= course.course_title %>,<%=course.course_code %>
+                    </label><br>
+                    <% })%>
+                        <button>Register courses</button>
+            </form>
+
+
+
+            <%- include('../partials/footer.ejs') %>
+        </body>
+
+        </html>

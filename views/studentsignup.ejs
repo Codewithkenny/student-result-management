@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+    <body>
+        <%- include('./partials/nav.ejs') %>
+            <label>
+                <h1>STUDENT REGISTRATION</h1>
+            </label>
+            <fieldset>
+                <form action="" class="std" method="post">
+                    <label for="username">First Name</label>
+                    <input type="text" name="first_name" id="username">
+                    <label for="email">Last Name</label>
+                    <input type="text" name="last_name" id="email">
+                    <label for="email">Matric Number</label>
+                    <input type="text" name="matric_number" id="email">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <button type="submit">Login</button>
+                </form>
+            </fieldset>
+
+            <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>

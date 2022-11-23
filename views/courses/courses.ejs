@@ -1,0 +1,44 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+
+
+
+    <body>
+        <%- include('../partials/nav.ejs') %>
+
+            <table class="tbl" border="1px" bgcolor="#33ccff" width="500px">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Title</th>
+                    <th>Course Unit</th>
+                </tr>
+
+                <% courses.forEach(course=> { %>
+                    <tr>
+
+                        <td>
+                            <a href="/courses/<%= course._id%>">
+                                <%= course.course_code %>
+                            </a>
+                        </td>
+
+                        <td>
+                            <%= course.course_title%>
+                        </td>
+                        <td>
+                            <%= course.course_unit%>
+                        </td>
+                    </tr>
+
+                    <% }) %>
+
+            </table>
+
+            <%- include('../partials/footer.ejs') %>
+
+
+    </body>
+
+</html>
