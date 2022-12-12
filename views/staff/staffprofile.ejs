@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+    <body>
+        <%- include('./partials/nav.ejs') %>
+            <label>
+                <h1>STAFF PROFILE</h1>
+            </label>
+            <fieldset>
+                <form action="" class="staff" method="post">
+                    <label for="username">First Name</label>
+                    <input type="text" name="first_name" id="first_name">
+                    <label for="email">Last Name</label>
+                    <input type="text" name="last_name" id="last_name">
+                    <label for="email">EMAIL</label>
+                    <input type="text" name="email" id="email">
+                    <label for="dept">Department</label>
+                    <input type="text" name="dept" id="dept">
+                    <label for="photo"></label>
+                    <input type="file" value="photo">
+                </form>
+            </fieldset>
+
+            <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>

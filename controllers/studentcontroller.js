@@ -1,11 +1,14 @@
+require("dotenv").config();
 const Student = require("../models/student");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-// function to create json web token
+const tokenKey = process.env.TOKEN_KEY;
 const maxAge = 3 * 24 * 60 * 60;
+// function to create json web token
+
 const createToken = (id) => {
-  const token = jwt.sign({ id }, "Secret token string", {
+  const token = jwt.sign({ id }, tokenKey, {
     expiresIn: maxAge,
   });
   return token;
@@ -74,4 +77,13 @@ module.exports.signup_post = async (req, res) => {
     maxAge: maxAge * 1000,
   });
   res.status(201).json(student);
+};
+
+// get single student
+module.exports.get_single_student = async (req, res) => {
+  const { id } = req.params.id;
+
+  //find student with id
+  const student = await Student.findById({ id });
+  res.status(200).json(student);
 };

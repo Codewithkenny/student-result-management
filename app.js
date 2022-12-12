@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const studentroutes = require("./routes/studentroute");
 const courseroutes = require("./routes/courseroutes");
 const reportcardroutes = require("./routes/reportcardroutes");
+const staffroutes = require("./routes/staffroutes");
+const adminroutes = require("./routes/adminroutes");
 const courseRegisterRoutes = require("./routes/courseRegisterRoutes");
 const cookieParser = require("cookie-parser");
 const requireAuth = require("./middlewares/requireAuth");
@@ -26,8 +28,8 @@ mongoose
   .connect(dbURI, { useNewURLParser: true })
   .then((result) => {
     console.log("Connected to Database");
-    app.listen(3000, () => {
-      console.log("Server listening on port 3000");
+    app.listen(4000, () => {
+      console.log("Server listening on port 4000");
     });
   })
   .catch((err) => {
@@ -47,6 +49,8 @@ app.use(courseroutes);
 app.use(studentroutes);
 app.use(courseRegisterRoutes);
 app.use(reportcardroutes);
+app.use(staffroutes);
+app.use(adminroutes);
 
 app.use((req, res) => {
   res.render("404");
